@@ -1,0 +1,18 @@
+#pin-wrapper {
+  display: flex;
+  flex-flow: wrap;
+}
+
+#pin-wrapper .entry {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#pin-wrapper .entry .status__prepend {
+  display: none;
+}
+
+#pin-wrapper .entry .status {
+  border: none;
+}
