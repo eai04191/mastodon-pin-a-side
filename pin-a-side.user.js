@@ -3,17 +3,13 @@
 // @namespace    mizle.net
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.1
+// @version      1.1.0
 // @icon         https://i.imgur.com/CRc4i2N.png
 
 // @homepageURL  https://github.com/eai04191/mastodon-pin-a-side
 // @supportURL   https://github.com/eai04191/mastodon-pin-a-side/issues
 
 // @match        https://*/@*
-
-// @resource     css https://raw.githubusercontent.com/eai04191/mastodon-pin-a-side/master/style.css
-
-// @grant        GM_getResourceText
 // ==/UserScript==
 
 (function() {
@@ -32,15 +28,38 @@
     });
 
     function injectionCSS() {
+      const css = getCSS();
       const style = document.createElement("style");
-      const css = document.createTextNode(GM_getResourceText("css"));
-      style.appendChild(css);
-      document.getElementsByTagName("head")[0].appendChild(style);
+      style.innerHTML = css;
+      document.querySelector("head").appendChild(style);
     }
 
     function getBackgroundColor() {
       return window.getComputedStyle(document.querySelector(".entry"))
         .backgroundColor;
+    }
+
+    function getCSS() {
+      return `
+        #pin-wrapper {
+          display: flex;
+          flex-flow: wrap;
+        }
+
+        #pin-wrapper .entry {
+          width: 100%;
+          border-radius: 4px;
+          margin-bottom: 10px;
+        }
+
+        #pin-wrapper .entry .status__prepend {
+          display: none;
+        }
+
+        #pin-wrapper .entry .status {
+          border: none;
+        }
+      `;
     }
   }
 })();
