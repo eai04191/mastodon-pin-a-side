@@ -11,7 +11,7 @@ Have you ever used userscript? If so, you can install by opening the [pin-a-side
 If you are new to using userscript, please install extensions first into the your browser.
 
 - Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- Firefox: [Greasemonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/)
+- Firefox: [Tampermonkey](https://addons.mozilla.org/ja/firefox/addon/tampermonkey/)
 - Opera: [Tampermonkey](https://addons.opera.com/ja/extensions/details/tampermonkey-beta/)
 
 ## License
