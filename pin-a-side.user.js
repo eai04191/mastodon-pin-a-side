@@ -3,7 +3,7 @@
 // @namespace    mizle.net
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.1.0
+// @version      1.1.1
 // @icon         https://i.imgur.com/CRc4i2N.png
 
 // @homepageURL  https://github.com/eai04191/mastodon-pin-a-side
@@ -14,7 +14,7 @@
 
 (function() {
   "use strict";
-  if (document.querySelector("[alt='Mastodon']")) {
+  if (document.querySelector("[alt='Mastodon']") || document.querySelector("#mastodon-svg-logo-full")) {
     injectionCSS();
 
     const pinWrapper = document.createElement("div");
